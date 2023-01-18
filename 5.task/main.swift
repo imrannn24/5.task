@@ -34,25 +34,13 @@ for (product,cena) in spisok{
 print("Выберите товары(введите их наименование):")
 var u = 0
 var basket2: [String:Int] = [:]
-var tovar = readLine()!
+for _ in 1...3{
+let tovar = readLine()!
 for (prod,cen) in spisok{
     if tovar == prod{
         u += cen
         basket2.updateValue(cen, forKey: prod)
-    }
-}
-var tovar2 = readLine()!
-for (prod,cen) in spisok{
-    if tovar2 == prod{
-        u += cen
-        basket2.updateValue(cen, forKey: prod)
-    }
-}
-var tovar3 = readLine()!
-for (prod,cen) in spisok{
-    if tovar3 == prod{
-        u += cen
-        basket2.updateValue(cen, forKey: prod)
+        }
     }
 }
 print("-----------ЧЕК-----------")
